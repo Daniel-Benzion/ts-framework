@@ -20,7 +20,8 @@ export class User {
     }
 
     on(eventName: string, callback: Callback): void  {
-        //example
-        this.events['asdf'] = [];
+        const handlers = this.events[eventName] || [];
+        handlers.push(callback);
+        this.events[eventName] = handlers;
     }
 }
