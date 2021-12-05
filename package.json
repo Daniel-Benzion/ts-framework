@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Daniel-Benzion/ts-framework/issues"
   },
-  "homepage": "https://github.com/Daniel-Benzion/ts-framework#readme"
+  "homepage": "https://github.com/Daniel-Benzion/ts-framework#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }
