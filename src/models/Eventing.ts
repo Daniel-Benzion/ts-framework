@@ -19,4 +19,4 @@ export class Eventing {
             callback();
         });
     }
-}
+} 
