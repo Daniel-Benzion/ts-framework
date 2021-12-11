@@ -7,8 +7,8 @@ export class Sync {
 
     }
 
-    fetch(): void {
-        axios.get(`${this.rootUrl}/${this.get('id')}`)
+    fetch(id: number): void {
+        axios.get(`${this.rootUrl}/${id}`)
             .then((response: AxiosResponse): void => {
                 this.set(response.data);
             });
@@ -16,12 +16,12 @@ export class Sync {
 
     save(data: UserProps): void {
 
-        const id = this.get('id');
+        const { id } = data;
 
         if (id) {
-            axios.put(`this.rootUrl/${id}`, this.data);
+            axios.put(`this.rootUrl/${id}`, data);
         } else {
-            axios.post(this.rootUrl, this.data);
+            axios.post(this.rootUrl, data);
         }
     }
 }
