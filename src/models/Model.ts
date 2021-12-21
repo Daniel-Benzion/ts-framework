@@ -16,6 +16,10 @@ interface Events {
     trigger(eventName: string): void;
 }
 
-export class Model {
-
+export class Model<T> {
+    constructor(
+        private attrirbutes: ModelAttributes<T>,
+        private events: Events,
+        private sync: Sync<T>
+    ) {}
 }
