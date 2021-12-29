@@ -24,5 +24,7 @@ export class Collection {
                     this.models.push(user);
                 });
             });
+            
+        this.trigger('change');
     }
 }
