@@ -2,7 +2,7 @@ export class UserForm {
 
     constructor(public parent: Element) {}
 
-    eventsMap() {
+    eventsMap(): { [key: string]: () => void } {
         return {
             'click:button': this.onButtonClick
         };
