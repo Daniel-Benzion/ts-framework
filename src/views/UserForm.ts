@@ -1,6 +1,8 @@
+import { User } from '../models/User';
+
 export class UserForm {
 
-    constructor(public parent: Element) {}
+    constructor(public parent: Element, public model: User) {}
 
     eventsMap(): { [key: string]: () => void } {
         return {
