@@ -5,7 +5,7 @@ export class UserForm {
     constructor(public parent: Element, public model: User) {
         this.bindModel();
     }
-    
+
     bindModel(): void {
         this.model.on('change', () => {
             this.render();
@@ -47,6 +47,8 @@ export class UserForm {
     }
 
     render(): void {
+        this.parent.innerHTML = '';
+        
         const templateElement = document.createElement('template');
         templateElement.innerHTML = this.template();
 
