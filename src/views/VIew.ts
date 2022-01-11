@@ -1,3 +1,5 @@
+import { User } from "../models/User";
+
 export abstract class View {
 
     constructor(public parent: Element, public model: User) {
@@ -31,5 +33,9 @@ export abstract class View {
 
         this.parent.append(templateElement.content);
     }
+
+    abstract eventsMap(): { [key: string]: () => void };
+
+    abstract template(): string;
 
 }
