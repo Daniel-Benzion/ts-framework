@@ -34,8 +34,10 @@ export abstract class View<T extends Model<K>, K> {
         this.parent.append(templateElement.content);
     }
 
-    abstract eventsMap(): { [key: string]: () => void };
-
     abstract template(): string;
+
+    eventsMap(): { [key: string]: () => void } {
+        return {};
+    }}
 
 }
