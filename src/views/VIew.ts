@@ -38,6 +38,6 @@ export abstract class View<T extends Model<K>, K> {
 
     eventsMap(): { [key: string]: () => void } {
         return {};
-    }}
+    }
 
 }
