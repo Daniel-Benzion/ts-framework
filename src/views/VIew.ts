@@ -2,8 +2,16 @@ import { Model } from "../models/Model";
 
 export abstract class View<T extends Model<K>, K> {
 
+    regions: { [key: string]: Element } = {};
+
     constructor(public parent: Element, public model: T) {
         this.bindModel();
+    }
+
+    abstract template(): string;
+
+    regionsMap(): { [key: string]: string } {
+        return {};
     }
 
     bindModel(): void {
@@ -33,8 +41,6 @@ export abstract class View<T extends Model<K>, K> {
 
         this.parent.append(templateElement.content);
     }
-
-    abstract template(): string;
 
     eventsMap(): { [key: string]: () => void } {
         return {};
