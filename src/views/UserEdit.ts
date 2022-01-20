@@ -10,6 +10,10 @@ export class UserEdit extends View<User, UserProps> {
         };
     }
 
+    onRender(): void {
+        
+    }
+
     template(): string {
         return `
             <div>
